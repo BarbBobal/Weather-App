@@ -1,0 +1,135 @@
+.container {
+  margin-top: 180px;
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #214252;
+  color: #fff3e2;
+  padding: 25px;
+}
+
+p {
+  color: #ff9a76;
+}
+
+.search-bar .col {
+  padding: 0;
+  display: block;
+}
+
+.search-bar .row {
+  padding-left: 10px;
+}
+
+.btn {
+  background-color: #ff9a76;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 10px 14px;
+}
+
+.btn:hover {
+  opacity: 1;
+  background-color: #ff9a76;
+}
+
+.btn i {
+  color: #214252;
+}
+
+.current-search {
+  background-color: #ff9a76;
+  border-radius: 4px 4px 4px 4px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 10px 14px;
+}
+
+.current-search:hover {
+  opacity: 1;
+  background-color: #ff9a76;
+}
+
+.form-control-search {
+  border-radius: 4px 0 0 4px;
+  border: none;
+  width: 100%;
+  padding: 10px;
+}
+
+#main-cnt {
+  line-height: 20px;
+  padding-top: 30px;
+}
+
+h3 {
+  font-weight: lighter;
+  font-size: 22px;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+h1 i {
+  font-size: 15px;
+  color: #fff3e2;
+  position: relative;
+  bottom: 30px;
+}
+
+.degrees {
+  font-size: 15px;
+  position: relative;
+  bottom: 30px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+#forecast {
+  padding: 30px 10px 0 10px;
+}
+
+#forecast .col {
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#forecast .row {
+  column-gap: 10px;
+  text-align: center;
+}
+
+#forecast i {
+  color: #fff3e2;
+  font-size: 15px;
+}
+
+#forecast span {
+  opacity: 0.8;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+#forecast p {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0;
+}
+
+.degrees a {
+  text-decoration: none;
+  color: #fff3e2;
+}
+.degrees a:hover {
+  color: white;
+}
