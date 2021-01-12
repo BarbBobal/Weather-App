@@ -133,3 +133,9 @@ h4 {
 .degrees a:hover {
   color: white;
 }
+
+small {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}
