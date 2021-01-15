@@ -102,18 +102,20 @@ function currentWeather(response) {
   let currentHumidity = response.data.main.humidity;
   humidity.innerHTML = `${currentHumidity}`;
 
-  /*let precipitation = document.querySelector("#precipitation");
-  let currentPrecipitation = response.data.main.precipitation;
-  precipitation.innerHTML = `${currentPrecipitation}`;*/
-
   let wind = document.querySelector("#wind");
   let currentWind = Math.round(response.data.wind.speed);
   wind.innerHTML = `${currentWind}`;
 
-  let description = response.data.weather[0].description;
+  let description = response.data.weather[0].main;
   let currentDescription = document.querySelector("#description");
   currentDescription.innerHTML = `${description}`;
 }
+
+/*function searchCity(city) {
+  let apiKey = "dc56a0fdc815a8ed54bd6518609ecbc3";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(currentWeather);
+}*/
 
 function showCity(event) {
   event.preventDefault();
@@ -122,11 +124,13 @@ function showCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(currentWeather);
+  /*searchCity("city");*/
 }
 let newCity = document.querySelector(".search-bar");
 newCity.addEventListener("click", showCity);
 
 //current location button
+
 function showCurrentLocationTemp(response) {
   let currentCity = response.data.name;
   let temperature = Math.round(response.data.main.temp);
@@ -151,3 +155,5 @@ function getCurrentLocation(event) {
 
 let currentLocation = document.querySelector(".current-search");
 currentLocation.addEventListener("click", getCurrentLocation);
+
+//searchCity("London");
