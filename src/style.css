@@ -39,7 +39,7 @@ p {
   color: #214252;
 }
 
-.current-search {
+.current-search-btn {
   background-color: #ff9a76;
   border-radius: 4px 4px 4px 4px;
   border: none;
@@ -48,7 +48,7 @@ p {
   padding: 10px 14px;
 }
 
-.current-search:hover {
+.current-search-btn:hover {
   opacity: 1;
   background-color: #ff9a76;
 }
@@ -60,36 +60,54 @@ p {
   padding: 10px;
 }
 
-#main-cnt {
+#main-content {
   line-height: 20px;
   padding-top: 30px;
 }
 
-h3 {
+#main-content h3 {
   font-weight: lighter;
   font-size: 22px;
+  margin-bottom: 0;
 }
 
-h1 {
-  font-size: 60px;
+#temperature {
   text-align: center;
+  margin-right: 60px;
 }
 
-h1 i {
+#temperature h1 {
+  font-size: 60px;
+}
+
+#temperature h2 {
+  font-size: 38px;
+}
+#temperature i {
   font-size: 15px;
   color: #fff3e2;
   position: relative;
-  bottom: 30px;
+  top: 31px;
+  right: 30px;
 }
 
 .degrees {
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
-  bottom: 30px;
+  bottom: 68px;
+  left: 39px;
 }
 
-h2 {
-  font-size: 40px;
+.degrees a {
+  text-decoration: none;
+  color: #fff3e2;
+}
+.degrees a:hover {
+  color: white;
+}
+
+.attritubutes {
+  margin-left: -8px;
 }
 
 #forecast {
@@ -116,7 +134,7 @@ h2 {
   opacity: 0.8;
 }
 
-h4 {
+#forecast h4 {
   font-size: 16px;
 }
 
@@ -124,14 +142,6 @@ h4 {
   font-weight: bold;
   font-size: 15px;
   margin: 0;
-}
-
-.degrees a {
-  text-decoration: none;
-  color: #fff3e2;
-}
-.degrees a:hover {
-  color: white;
 }
 
 small {

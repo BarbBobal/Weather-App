@@ -153,7 +153,7 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-let currentLocation = document.querySelector(".current-search");
+let currentLocation = document.querySelector(".current-search-btn");
 currentLocation.addEventListener("click", getCurrentLocation);
 
 //searchCity("London");

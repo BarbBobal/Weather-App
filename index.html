@@ -14,18 +14,19 @@
     <script
       src="https://kit.fontawesome.com/d4609974de.js"
       crossorigin="anonymous"
-    ></script>
-    <title>Weather app</title>
+    ></script> 
     <link rel="stylesheet" href="src/style.css" />
-   
+    <title>Weather app</title>
   </head>
   <body>
     <div class="container">
      <form class="search-bar">
+
+      <!-------------------------------------Search bar-------------------------------------->
         <div class="row">
           <div class="col">
             <input
-              type="text" class="form-control-search"
+              type="text" class="form-control-search" 
               placeholder="Enter city..."
             />
           </div>
@@ -34,27 +35,32 @@
             </button>
           </div>
           <div class="col">
-            <button type="submit" class="current-search">Current city</button>
+            <button type="submit" class="current-search-btn">Current city</button>
             </button>
           </div>
         </div>
         </form>
       
-
-      <div id="main-cnt">
+<!------------------------Body of the app showing city and temperature-------------------------->
+      <div id="main-content">
         <div class="row">
           <div class="col">
-            <h2>London</h2>
-            <h3 id="current-date">Friday 23:00</h3> <h3><span id="description">Cloudy</span></h3>
+            <h2 id="current-city"> London</h2>
+            <h3 id="current-date">Friday 23:00</h3> 
+            <h3 id="description">Cloudy</h3>
           </div>
+
           <div class="col">
-            <h1>
-              <i class="fas fa-cloud"></i><span class ="degree-number">
-              8</span><span class="degrees"> <a href="#" class ="celsius" >°C |</a> <a href="#" class="farenheit">°F</a></span>
-            </h1>
+          <div id="temperature">
+            <i class="fas fa-cloud"></i>
+            <h1 class="degree-number">8 </h1>
+            <p class="degrees"> <a href="#" class="celsius">°C |</a> <a href="#" class="farenheit">°F</a></p>
           </div>
+          </div>
+
+
           <div class="col">
-            <p>
+            <p class="attritubutes">
               Precipitation: <span id="precipitation">24</span>% <br />Humidity: <span id="humidity"> 94</span>% <br />
              Wind:  <span id="wind">2</span>km/h
             </p>
@@ -62,30 +68,28 @@
         </div>
       </div>
 
+
+<!---------------------------------Forecast for the next 5 days--------------------------------->
       <div id="forecast">
         <div class="row">
           <div class="col">
             <h4>Sat</h4>
             <i class="fas fa-cloud-showers-heavy"></i>
-
             <p>9°/<span>2°</span></p>
           </div>
           <div class="col">
             <h4>Sun</h4>
             <i class="fas fa-cloud-showers-heavy"></i>
-
             <p>9°/<span>2°</span></p>
           </div>
           <div class="col">
             <h4>Mon</h4>
             <i class="fas fa-cloud-showers-heavy"></i>
-
             <p>9°/<span>2°</span></p>
           </div>
           <div class="col">
             <h4>Tue</h4>
             <i class="fas fa-cloud-showers-heavy"></i>
-
             <p>9°/<span>2°</span></p>
           </div>
           <div class="col">
@@ -97,7 +101,7 @@
       </div>
     </div>
     <small><a href="https://github.com/BarbBobal/Weather-App">Open-source code</a>, by Barbora Bobalova</small>
-    <script src='index.js'></script> 
+    <script src='src/index.js'></script> 
   </body>
   
 </html>
