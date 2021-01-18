@@ -1,50 +1,6 @@
-/*let weather = {
-  paris: {
-    temp: 19.7,
-    humidity: 80,
-  },
-  tokyo: {
-    temp: 17.3,
-    humidity: 50,
-  },
-  lisbon: {
-    temp: 30.2,
-    humidity: 20,
-  },
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100,
-  },
-  moscow: {
-    temp: -5,
-    humidity: 20,
-  },
-};
+// the current time and day when app opens
 
-// write your code here
-let city = prompt("Enter a city");
-city = city.trim();
-city = city.toLowerCase();
-
-if (weather[city] === undefined) {
-  alert(
-    `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
-  );
-} else {
-  let humidity = weather[city].humidity;
-  let temperature = weather[city].temp;
-
-  alert(
-    `It is currently ${temperature} degrees in ${city} with a humidity of ${humidity}%.`
-  );
-}
-console.log(weather.city);
-console.log(city);*/
-
-// change the current time and day
-let now = new Date();
-let hour = now.getHours();
-let minute = now.getMinutes();
+let date = new Date();
 let days = [
   "Sunday",
   "Monday",
@@ -54,11 +10,20 @@ let days = [
   "Friday",
   "Saturday",
 ];
-let day = days[now.getDay()];
-let currentDate = document.querySelector("#current-date");
-currentDate.innerHTML = `${day} ${hour}:${minute}`;
+let day = days[date.getDay()];
+let hours = date.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+let minutes = date.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 
-//display the city name on the page after the user submits the form
+let currentDate = document.querySelector("#current-date");
+currentDate.innerHTML = `${day} ${hours}:${minutes}`;
+
+/*//display the city name on the page after the user submits the form
 function showCurrentCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector(".form-control-search");
@@ -70,7 +35,7 @@ function showCurrentCity(event) {
   }
 }
 let form = document.querySelector(".search-bar");
-form.addEventListener("submit", showCurrentCity);
+form.addEventListener("submit", showCurrentCity);*/
 
 //convert CtoF and FtoC
 function converToFarenheit() {
@@ -87,7 +52,7 @@ function convertToCelsius() {
 let celsius = document.querySelector(".celsius");
 celsius.addEventListener("click", convertToCelsius);
 
-//show current temperature in the city
+//show current temperature in the city you search for
 
 function currentWeather(response) {
   console.log(response.data);
@@ -106,7 +71,7 @@ function currentWeather(response) {
   let currentWind = Math.round(response.data.wind.speed);
   wind.innerHTML = `${currentWind}`;
 
-  let description = response.data.weather[0].main;
+  let description = response.data.weather[0].description;
   let currentDescription = document.querySelector("#description");
   currentDescription.innerHTML = `${description}`;
 }
