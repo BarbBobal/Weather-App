@@ -1,5 +1,3 @@
-
-
 .container {
   margin-top: 100px;
   width: 38%;
@@ -14,80 +12,74 @@
   .container {
     width: 100%;
     height: 100%;
-    margin-top: 0;  
-  background-color: #214252;
+    margin-top: 0;
+    background-color: #214252;
   }
 }
- 
 
-  p {
-    color: #ff9a76;
-  }
-
-  .search-bar .col {
-    padding: 0;
-    display: block;
-  }
-
-  .search-bar .row {
-    padding-left: 10px;
-  }
-
-  .btn {
-    background-color: #ff9a76;
-    border-radius: 0 4px 4px 0;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    padding: 10px 14px;
-  }
-
-  .btn:hover {
-    opacity: 1;
-    background-color: #ff9a76;
-  }
-  .col-6 {
-    padding: 0;
-  }
-  .btn i {
-    color: #214252;
-  }
-
-  .current-search-btn {
-    background-color: #ff9a76;
-    border-radius: 4px 4px 4px 4px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    padding: 10px 14px;
-  }
-
-  .current-search-btn:hover {
-    opacity: 1;
-    background-color: #ff9a76;
-  }
-
-  .form-control-search {
-    border-radius: 4px 0 0 4px;
-    border: none;
-    width: 100%;
-    padding: 10px;
-  }
-
-  #main-content {
-    line-height: 20px;
-    padding-top: 30px;
-  }
-
-  #current-city {
-    font-size: 40px;
-  }
-
-  /*@media screen and (max-width: 450px) {
-  #current-city {
-    font-size: 20px;
-  }*/
+p {
+  color: #ff9a76;
 }
+
+.search-bar .col {
+  padding: 0;
+  display: block;
+}
+
+.search-bar .row {
+  padding-left: 10px;
+}
+
+.btn {
+  background-color: #ff9a76;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 10px 14px;
+}
+
+.btn:hover {
+  opacity: 1;
+  background-color: #ff9a76;
+}
+.col-6 {
+  padding: 0;
+}
+.btn i {
+  color: #214252;
+}
+
+.current-search-btn {
+  background-color: #ff9a76;
+  border-radius: 4px 4px 4px 4px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 10px 14px;
+}
+
+.current-search-btn:hover {
+  opacity: 1;
+  background-color: #ff9a76;
+}
+
+.form-control-search {
+  border-radius: 4px 0 0 4px;
+  border: none;
+  width: 100%;
+  padding: 10px;
+}
+
+#main-content {
+  line-height: 20px;
+  padding-top: 30px;
+}
+
+#current-city {
+  font-size: 40px;
+}
+
 #current-date {
   font-weight: lighter;
   font-size: 18px;
@@ -151,13 +143,6 @@
   column-gap: 20px;
   font-size: 15px;
 }
-
-/*@media screen and (max-width: 400px) {
-    #forecast {
-     grid-template-columns:1fr;
-    }
-  }
-}*/
 
 #forecast .col-2 {
   border: 1px solid white;
