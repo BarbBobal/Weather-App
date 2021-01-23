@@ -1,4 +1,4 @@
-// the current time and day when app opens
+// -----------------the current time and day when app opens
 
 let date = new Date();
 let days = [
@@ -23,29 +23,7 @@ if (minutes < 10) {
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
-/*//convert CtoF and FtoC
-function converToFarenheit(event) {
-  let degree = document.querySelector(".degree-number");
-  celsiusLink.classList.remove("active");
-  farenheitLink.classList.add("active");
-  let farenheit = (celsius * 9) / 5 + 32;
-  degree.innerHTML = Math.round(farenheit);
-}
-let farenheitLink = document.querySelector(".farenheit");
-farenheitLink.addEventListener("click", converToFarenheit);
-
-function convertToCelsius() {
-  let degree = document.querySelector(".degree-number");
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  farenheitLink.classList.remove("active");
-  degree.innerHTML = Math.round(celsius);
-}
-let celsius = null;
-let celsiusLink = document.querySelector(".celsius");
-celsiusLink.addEventListener("click", convertToCelsius);*/
-
-//show current temperature in the city you search for
+//-------------show current temperature in the city you search for
 
 function currentWeather(response) {
   console.log(response.data);
@@ -77,10 +55,51 @@ function currentWeather(response) {
   celsius = response.data.main.temp;
 }
 
+//---------------------------------------forecast
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
+}
+
+function displayForecast(response) {
+  console.log(displayForecast);
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 5; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+    <div class="col-2">
+            <h4>${formatHours(forecast.dt * 1000)}</h4>
+            <img src="http://openweathermap.org/img/wn/${
+              forecast.weather[0].icon
+            }@2x.png" alt="" id="forecast-icon">
+            <p> ${Math.round(forecast.main.temp_max)}°/<span> ${Math.round(
+      forecast.main.temp_min
+    )}°</span></p>
+          </div>
+  `;
+  }
+}
+
 function searchCity(city) {
   let apiKey = "dc56a0fdc815a8ed54bd6518609ecbc3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(currentWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
@@ -92,7 +111,7 @@ function handleSubmit(event) {
 let newCity = document.querySelector(".search-bar"); //(".search-bar .btn");
 newCity.addEventListener("submit", handleSubmit);
 
-//convert CtoF and FtoC
+//--------------------------------convert C to F and F to C
 function converToFarenheit(event) {
   event.preventDefault();
   let tempElement = document.querySelector(".degree-number");
@@ -118,7 +137,7 @@ let celsiusLink = document.querySelector(".celsius");
 celsiusLink.addEventListener("click", convertToCelsius);
 let celsius = null;
 
-//current location button
+//--------------------------------current location button
 
 function showCurrentLocationTemp(response) {
   let currentCity = response.data.name;

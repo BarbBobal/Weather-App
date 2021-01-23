@@ -1,6 +1,6 @@
 .container {
   margin-top: 180px;
-  width: 40%;
+  width: 38%;
   border: 1px solid black;
   border-radius: 15px;
   background: #214252;
@@ -34,7 +34,9 @@ p {
   opacity: 1;
   background-color: #ff9a76;
 }
-
+.col-6 {
+  padding: 0;
+}
 .btn i {
   color: #214252;
 }
@@ -66,7 +68,7 @@ p {
 }
 
 #current-city {
-  font-size: 42px;
+  font-size: 40px;
 }
 #current-date {
   font-weight: lighter;
@@ -76,7 +78,7 @@ p {
 
 #description {
   color: #ff9a76;
-  font-size: 26px;
+  font-size: 24px;
   margin-bottom: 0;
   text-transform: capitalize;
   font-weight: lighter;
@@ -91,7 +93,6 @@ p {
 
 #temperature {
   text-align: center;
-  margin-right: 60px;
 }
 
 #temperature h1 {
@@ -99,27 +100,29 @@ p {
   text-align: center;
 }
 
-#icon {
-  max-width: 45px;
-  color: #fff3e2;
-  position: relative;
-  bottom: 30px;
-  left: 10px;
+.degree-number {
+  font-size: 50px;
 }
 
 .degrees {
   font-size: 15px;
   position: relative;
-  top: -101px;
-  left: 55px;
+  bottom: 25px;
+  right: 13px;
 }
 
 .degrees a {
   text-decoration: none;
   color: #fff3e2;
+  font-weight: lighter;
 }
 .degrees a:hover {
   color: white;
+}
+
+#icon {
+  max-width: 75px;
+  padding-left: 28px;
 }
 
 .attritubutes {
@@ -127,37 +130,37 @@ p {
 }
 
 #forecast {
-  padding: 30px 10px 0 10px;
+  padding: 0px 10px 0 10px;
+  column-gap: 20px;
+  font-size: 15px;
 }
 
-#forecast .col {
+#forecast .col-2 {
   border: 1px solid white;
   padding: 5px;
   border-radius: 4px;
-}
-
-#forecast .row {
-  column-gap: 10px;
   text-align: center;
 }
 
-#forecast i {
-  color: #fff3e2;
-  font-size: 15px;
+#forecast-icon {
+  width: 30px;
 }
 
 #forecast span {
   opacity: 0.8;
+  color: #fff3e2;
 }
 
 #forecast h4 {
-  font-size: 16px;
+  padding: 0;
+  font-size: 15px;
+  font-weight: lighter;
 }
 
 #forecast p {
-  font-weight: bold;
-  font-size: 15px;
-  margin: 0;
+  font-weight: bolder;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 small {

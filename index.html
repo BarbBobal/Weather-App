@@ -26,14 +26,14 @@
       <!-------------------------------------Search bar-------------------------------------->
          <form class="search-bar">
            <div class="row">
-          <div class="col">
+          <div class="col-6">
             <input
               type="text" class="form-control-search" 
               placeholder="Enter city..."
             />
           </div>
           <div class="col">
-            <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+          <button type="submit" class="btn"><i class="fa fa-search"></i></button>
             </button>
           </div>
           <div class="col">
@@ -53,19 +53,19 @@
            
           </div>
 
-          <div class="col">
-          <div id="temperature">
+          <div id="temperature" class="col">
+          
             <h1>
-              <img src="" alt="" id ="icon"></i>
               <span class="degree-number"></span>
               <span class="degrees"> <a href="#" class="celsius">°C |</a> <a href="#" class="farenheit">°F</a></span>
             </h1>
-          </div>
+         
           </div>
 
 
-          <div class="col">
-             <h3 id="description">Cloudy</h3>
+          <div id="temp-description" class="col">
+             <h3 id="description"></h3>
+              <img src="" alt="" id="icon">
              <p class="attritubutes">
             Humidity: <span id="humidity"> 94</span>% <br />
              Wind:  <span id="wind">2</span>km/h
@@ -76,11 +76,10 @@
 
 
 <!---------------------------------Forecast for the next 5 days--------------------------------->
-      <div id="forecast">
-        <div class="row">
-          <div class="col">
+        <div id="forecast" class="row">
+        <!---- <div class="col">
             <h4>Sat</h4>
-            <i class="fas fa-cloud-showers-heavy"></i>
+            <img src="" alt="" id="icon">
             <p>9°/<span>2°</span></p>
           </div>
           <div class="col">
@@ -102,8 +101,7 @@
             <h4>Wed</h4>
             <i class="fas fa-cloud-showers-heavy"></i>
             <p>9°/<span>2°</span></p>
-          </div>
-        </div>
+          </div>--->
       </div>
     </div>
     <small><a href="https://github.com/BarbBobal/Weather-App">Open-source code</a>, by Barbora Bobalova</small>
