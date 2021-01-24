@@ -166,3 +166,11 @@ function getCurrentLocation(event) {
 let currentLocation = document.querySelector(".current-search-btn");
 currentLocation.addEventListener("click", getCurrentLocation);
 searchCity("London");
+
+function changePlaceholderText() {
+  console.log(changePlaceholderText);
+  document.querySelector(".form-control-search").placeholder =
+    "Please enter a city...";
+}
+let emptyCity = document.querySelector(".search-bar");
+emptyCity.addEventListener("submit", changePlaceholderText);
