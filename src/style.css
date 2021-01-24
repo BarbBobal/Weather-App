@@ -43,9 +43,11 @@ p {
   opacity: 1;
   background-color: #ff9a76;
 }
+
 .col-6 {
   padding: 0;
 }
+
 .btn i {
   color: #214252;
 }
@@ -101,10 +103,6 @@ p {
   color: #fff3e2;
 }
 
-#temperature {
-  text-align: center;
-}
-
 #temperature h1 {
   font-size: 60px;
   text-align: center;
@@ -132,10 +130,6 @@ p {
 
 #icon {
   max-width: 60px;
-}
-
-.attritubutes {
-  font-weight: 300;
 }
 
 #forecast {

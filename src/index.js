@@ -108,7 +108,7 @@ function handleSubmit(event) {
   searchCity(cityInput.value);
 }
 
-let newCity = document.querySelector(".search-bar"); //(".search-bar .btn");
+let newCity = document.querySelector(".search-bar");
 newCity.addEventListener("submit", handleSubmit);
 
 //--------------------------------convert C to F and F to C
@@ -166,6 +166,8 @@ function getCurrentLocation(event) {
 let currentLocation = document.querySelector(".current-search-btn");
 currentLocation.addEventListener("click", getCurrentLocation);
 searchCity("London");
+
+//--------------------change placeholder text onclick
 
 function changePlaceholderText() {
   console.log(changePlaceholderText);
