@@ -157,6 +157,8 @@ function searchLocation(position) {
   console.log(apiUrl);
 
   axios.get(apiUrl).then(showCurrentLocationTemp);
+  let api = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(api).then(displayForecast);
 }
 function getCurrentLocation(event) {
   event.preventDefault();
