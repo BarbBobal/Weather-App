@@ -5,7 +5,7 @@ This project is a Weather app built with HTML, CSS,  Vanilla Javascript, Bootstr
 <img width="1439" alt="Screenshot 2021-05-05 at 20 18 37" src="https://user-images.githubusercontent.com/77361223/117198834-65acc380-ade1-11eb-89d3-7889de695dd2.png">
 
 ## Features
-The project is build with HTML, CSS and Javascript and Bootstrap and it features API calls responsivness on mobile phones and tablets.
+The project is build with HTML, CSS and Javascript and Bootstrap and it features API calls, hourly forecast, conversion from forenheit to celsius, weather icons, current time and date.
 ## Running the project
 To fork a repo click "Code" to download the repository as a zip folder to your local computer.
 
