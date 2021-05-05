@@ -174,8 +174,17 @@ small a {
     height: 700px;
     margin-top: 0;
     background-color: #214252;
+    border-radius: 0;
+  }
+  .search-bar {
+    margin-top: 30px;
+  }
+  #main-content {
+    margin-top: 30px;
   }
   #forecast {
-    margin-top: 60px;
+    margin-top: 100px;
+    column-gap: 10px;
+    border: none;
   }
 }
