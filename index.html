@@ -21,55 +21,48 @@
   </head>
   <body>
     <div class="container">
-    
-
       <!-------------------------------------Search bar-------------------------------------->
          <form class="search-bar">
-           <div class="row">
-          <div class="col-6">
-            <input
-              type="text" class="form-control-search" 
-              placeholder="Enter city..."
-            />
-          </div>
-          <div class="col">
-          <button type="submit" class="btn"><i class="fa fa-search"></i></button>
-            </button>
-          </div>
-          <div class="col">
-            <button type="submit" class="current-search-btn">Current city</button>
-            </button>
-          </div>
+         <div class="row">
+            <div class="col-6 col-xs-12">
+              <input
+               type="text" class="form-control-search" 
+               placeholder="Enter city..."/> 
+            </div>
+
+            <div class="col">
+                <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+            </div>
+         
+            <div class="col col-xs-12">
+                <button type="submit" class="current-search-btn">Current city</button>
+            </div>
         </div>
         </form>
       
 <!------------------------Body of the app showing city and temperature-------------------------->
       <div id="main-content">
         <div class="row">
+
           <div class="col">
             <h2 id="current-city">London</h2>
             <p class ="update-time">Last updated:</p>
             <h3 id="current-date">Friday 23:00</h3>
-           
-          </div>
+         </div>
 
           <div id="temperature" class="col">
-          
             <h1>
               <span class="degree-number"></span>
               <span class="degrees"> <a href="#" class="celsius">°C |</a> <a href="#" class="farenheit">°F</a></span>
             </h1>
-         
           </div>
-
 
           <div id="temp-description" class="col">
              <h3 id="description"></h3>
-              <img src="" alt="" id="icon">
+             <img src="" alt="" id="icon">
              <p class="attributes">
-            Humidity: <span id="humidity"> 94</span>% <br />
-             Wind:  <span id="wind">2</span>km/h
-            </p>
+              Humidity: <span id="humidity"> 94</span>% <br />
+              Wind:  <span id="wind">2</span>km/h </p>
           </div>
         </div>
       </div>
@@ -79,8 +72,9 @@
         <div id="forecast" class="row">
       </div>
     </div>
-    <small><a href="https://github.com/barbsindev/Weather-App">Open-source code</a>, by Barbora Bobalova</small>
+    <footer>
+        <small><a href="https://github.com/barbsindev/Weather-App">Open-source code</a>, by Barbora Bobalova</small>
+   </footer>
     <script src='src/index.js'></script> 
   </body>
-  
 </html>

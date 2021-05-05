@@ -8,15 +8,6 @@
   padding: 25px;
 }
 
-@media screen and (max-width: 420px) {
-  .container {
-    width: 100%;
-    height: 100%;
-    margin-top: 0;
-    background-color: #214252;
-  }
-}
-
 p {
   color: #ff9a76;
 }
@@ -28,6 +19,10 @@ p {
 
 .search-bar .row {
   padding-left: 10px;
+}
+
+.col-6 {
+  padding: 0;
 }
 
 .btn {
@@ -42,10 +37,6 @@ p {
 .btn:hover {
   opacity: 1;
   background-color: #ff9a76;
-}
-
-.col-6 {
-  padding: 0;
 }
 
 .btn i {
@@ -88,19 +79,19 @@ p {
   margin-bottom: 0;
 }
 
+.update-time {
+  font-weight: lighter;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #fff3e2;
+}
+
 #description {
   color: #ff9a76;
   font-size: 24px;
   margin-bottom: 0;
   text-transform: capitalize;
   font-weight: lighter;
-}
-
-.update-time {
-  font-weight: lighter;
-  font-size: 14px;
-  margin-bottom: 0;
-  color: #fff3e2;
 }
 
 #temperature h1 {
@@ -175,4 +166,13 @@ small {
 small a {
   text-decoration: none;
   color: #214252;
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    background-color: #214252;
+  }
 }
