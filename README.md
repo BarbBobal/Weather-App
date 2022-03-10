@@ -14,5 +14,5 @@ https://docs.github.com/en/github/getting-started-with-github/fork-a-repo
 
 ## Dependencies
 
-This project was builtas a part of SheCodes workshop.
+This project was built as a part of SheCodes workshop.
 https://www.shecodes.io/
